@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Highfield.Models.Age>
+
+@{
+    ViewData["Title"] = "Ages";
+}
+
+<h1>Ages</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgePlusTwenty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgePlusTwenty)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
